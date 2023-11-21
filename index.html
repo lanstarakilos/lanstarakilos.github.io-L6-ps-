@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+
+    <title>SOI Learning Portal</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero-banner {
+        width: 100%;
+        background: linear-gradient(to right, rgb(192, 127, 127), rgb(126, 73, 65));
+        color: #fff;
+    }
+
+
+    .hero-banner .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .hero-banner img {
+        max-width: 100%;
+        border-radius: 8px;
+        margin-top: 0;
+    }
+
+    .hero-banner .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-banner .col-md-6 {
+        flex: 0 0 48%;
+        max-width: 48%;
+    }
+
+    .hero-banner h1 {
+        font-size: 2.5rem;
+        color: black;
+    }
+
+    .hero-banner p {
+        font-size: 1.5rem;
+        color: black;
+    }
+
+    .navbar {
+        padding: 1rem;
+        background: linear-gradient(to right, #8b615b, #f0c0a0);
+    }
+
+
+    .hero-banner {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-banner .btn {
+        margin-right: 10px;
+    }
+
+    .container.mt-5 h3,
+    .container.mt-5 p {
+        text-align: center;
+    }
+
+    .card-section .card {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border: none;
+    }
+
+    .card-section .card-footer {
+        background-color: #f8f9fa;
+    }
+
+    .navbar-nav .nav-link {
+        color: black;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: white;
+        background-color: rgb(192, 127, 127);
+    }
+
+
+
+    .col-md-4 {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+
+
+    footer {
+        background: linear-gradient(to right, #8b615b, #f0c0a0);
+        color: #fff;
+        padding: 20px 0;
+    }
+
+    .footer-links {
+        margin-top: 10px;
+    }
+
+    .footer-link {
+        color: #bbb;
+        text-decoration: none;
+        margin: 0 8px;
+    }
+
+    .footer-link:hover {
+        color: #fff;
+    }
+
+    .container .col-md-4:hover {
+        transform: translateY(-5px);
+        transition: transform 0.3s ease;
+    }
+
+    .card-section .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-section .card-footer:hover {
+        transform: translateY(-5px);
+        transition: transform 0.3s ease;
+    }
+
+    .card-section .card-footer .btn:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
+
+    @keyframes slideInFromRight {
+        0% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .hero-banner img {
+        animation: slideInFromRight 1s ease-out;
+    }
+</style>
+
+
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">SOI Learning Portal</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Search</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                <a class="nav-link" href="#"><i class="fa fa-bell" style="color: rgb(161, 76, 76);"></i></a>
+                <a class="nav-link" href="#"><i class="fa fa-user-circle" style="color: rgb(161, 76, 76);"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-banner">
+
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Welcome to SOI Learning Portal</h1>
+                    <p class="lead">Expertly crafted courses that best fit your learning needs and preferences.</p>
+                    <button class="btn btn-primary" style="background-color: rgb(161, 76, 76);">Browse Course</button>
+                    <button class="btn btn-primary" style="background-color: rgb(161, 76, 76);">Be an
+                        Instructor</button>
+
+                </div>
+                <div class="col-md-6">
+                    <img src="img/girl.png" class="img-fluid">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Three-column Section -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="d-flex align-items-start">
+                    <img src="img/book.png" alt="Course Image 1" class="img-fluid me-3" style="max-width: 40px;">
+                    <div>
+                        <h3>158 online courses</h3>
+                        <p>Enjoy a variety of fresh topics</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex align-items-start">
+                    <img src="img/programmer.png" alt="Course Image 2" class="img-fluid me-3" style="max-width: 40px;">
+                    <div>
+                        <h3>Expert instruction</h3>
+                        <p>Find the right instructor for you</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex align-items-start">
+                    <img src="img/clock.png" alt="Course Image 3" class="img-fluid me-3" style="max-width: 40px;">
+                    <div>
+                        <h3>Lifetime access</h3>
+                        <p>Learn on your schedule</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Row of Cards -->
+<div class="container mt-5 card-section">
+    <div class="row">
+        <!-- Card 1 -->
+        <div class="col-md-3 mb-4">
+            <div class="card text-center"> <!-- Added text-center class here -->
+                <img src="img/coding.png" class="card-img-top" alt="Course 1" style="max-width: 150px;">
+                <div class="card-body">
+                    <h5 class="card-title">Introduction to HTML and CSS</h5>
+                    <p class="card-text">2h 30m</p>
+                </div>
+                <div class="card-footer text-muted d-flex align-items-center">
+                    <a class="nav-link" href="#"><i class="fa fa-user-circle" style="color: rgb(192, 127, 127);"></i></a>
+                    <span class="mr-2">Hannah Lim</span>
+                    <a href="#" class="btn btn-light"><i class="fa fa-bookmark"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-3 mb-4">
+            <div class="card text-center"> <!-- Added text-center class here -->
+                <img src="img/ui-ux.png" class="card-img-top mx-auto" alt="Course 2" style="max-width: 150px;">
+                <div class="card-body">
+                    <h5 class="card-title">User Experience and Interface Design</h5>
+                    <p class="card-text">2h 45m</p>
+                </div>
+                <div class="card-footer text-muted d-flex align-items-center">
+                    <a class="nav-link" href="#"><i class="fa fa-user-circle" style="color: rgb(192, 127, 127);"></i></a>
+                    <span class="mr-2">Julia Lee</span>
+                    <a href="#" class="btn btn-light"><i class="fa fa-bookmark"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-3 mb-4">
+            <div class="card text-center"> <!-- Added text-center class here -->
+                <img src="img/app-store.png" class="card-img-top mx-auto" alt="Course 3" style="max-width: 150px;">
+                <div class="card-body">
+                    <h5 class="card-title">iOS App Development using Xcode and Swift</h5>
+                    <p class="card-text">4h 30m</p>
+                </div>
+                <div class="card-footer text-muted d-flex align-items-center">
+                    <a class="nav-link" href="#"><i class="fa fa-user-circle" style="color: rgb(192, 127, 127);"></i></a>
+                    <span class="mr-2">Ryan Low</span>
+                    <a href="#" class="btn btn-light"><i class="fa fa-bookmark"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-md-3 mb-4">
+            <div class="card text-center"> <!-- Added text-center class here -->
+                <img src="img/js-file.png" class="card-img-top mx-auto" alt="Course 4" style="max-width: 150px;">
+                <div class="card-body">
+                    <h5 class="card-title">Front-end JavaScript Frameworks</h5>
+                    <p class="card-text">3h 45m</p>
+                </div>
+                <div class="card-footer text-muted d-flex align-items-center">
+                    <a class="nav-link" href="#"><i class="fa fa-user-circle" style="color: rgb(192, 127, 127);"></i></a>
+                    <span class="mr-2">Azhar Kamar</span>
+                    <a href="#" class="btn btn-light"><i class="fa fa-bookmark"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <div class="containerf">
+            <p>&copy; © 2021 SOI Learning Portal. All Rights Reserved.</p>
+            <a href="#" style="color: #fff;">Privacy</a> |
+            <a href="#" style="color: #fff;">Terms</a> |
+            <a href="#" style="color: #fff;">Feedback</a> |
+            <a href="#" style="color: #fff;">Support</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
